@@ -10,15 +10,15 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - run: docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
-      - run: docker build -t abhinay/react-test -f ./client/Dockerfile.dev ./client
-      - run: docker run -e CI=true abhinay/react-test npm test
+      - run: docker build -t abhinayreddydocker/react-test -f ./client/Dockerfile.dev ./client
+      - run: docker run -e CI=true abhinayreddydocker/react-test npm test
  
-      - run: docker build -t abhinay/multi-client-28-12 ./client
-      - run: docker build -t abhinay/multi-nginx-28-12 ./nginx
-      - run: docker build -t abhinay/multi-server-28-12 ./server
-      - run: docker build -t abhinay/multi-worker-28-12 ./worker
+      - run: docker build -t abhinayreddydocker/multi-client-28-12 ./client
+      - run: docker build -t abhinayreddydocker/multi-nginx-28-12 ./nginx
+      - run: docker build -t abhinayreddydocker/multi-server-28-12 ./server
+      - run: docker build -t abhinayreddydocker/multi-worker-28-12 ./worker
  
-      - run: docker push abhinay/multi-client-28-12
-      - run: docker push abhinay/multi-nginx-28-12
-      - run: docker push abhinay/multi-server-28-12
-      - run: docker push abhinay/multi-worker-28-12
+      - run: docker push abhinayreddydocker/multi-client-28-12
+      - run: docker push abhinayreddydocker/multi-nginx-28-12
+      - run: docker push abhinayreddydocker/multi-server-28-12
+      - run: docker push abhinayreddydocker/multi-worker-28-12 
